@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+color scheme:
+#826a41 - brown
+#103b39 - blue
+#b49b73 - gray
+*/
+
+.header{
+    background-color: #826a41;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.header-logo{
+
+}
+.header-options{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+.options{
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.principal{
+    background-image: url(./img/photo.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.principal h1{
+    font-size: 36px;
+    font-family: 'Krona One', sans-serif;
+    padding: 10px;
+}
+
+.principal-text{
+    box-sizing: border-box;
+    background: rgba(180, 155, 115, 0.4);
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.principal p{
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 20px;
+    color: black;
+    width: 600px;
+    border-radius: 20px;
+}
+
+.principal-learn{
+    background-color: #826a41;
+    padding: 15px;
+    color: black;
+    font-size: 23px;
+    width: 200px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.user-experience{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-evenly;
+    background-color:#826a41;
+}
+
+.user-experience-title{
+    text-align: center;
+}
+
+.user-experience-list{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+.list-items{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 300px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.about-company{
+    display: flex;
+    flex-direction: row;
+    width: 100;
+    background-color: #103b39;
+    padding: 20px;
+}
+
+.about-team{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.person1,.person2{
+    padding: 10px 20px;
+}
+
+.picture1, .picture2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-history{
+    width: 50%;
+}
+
+.about-history h2{
+    padding-bottom: 20px;
+}
+
