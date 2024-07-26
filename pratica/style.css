@@ -137,3 +137,13 @@ color scheme:
     padding-bottom: 20px;
 }
 
+.newsletter{
+    background-color: #826a41;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.newsletter-img{
+    flex-basis: 80%;
+}
