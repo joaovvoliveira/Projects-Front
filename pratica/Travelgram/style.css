@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Krona+One&family=Montserrat:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --brand-color: #EF5F4C;
+  --background-color: #FFFFFF;
+  --surface-color: #F5F5F5;
+  --skeleton-color: #D9D9D9;
+  --shape-transparency:hsla(0, 0%, 100%, 0.568);
+  --text-color-primary: #313131;
+  --text-color-secondary: #6C6C6C;
+
+  --font-family: "Poppins", sans-serif;
+  --text-lg: bold 32px/125% var(--font-family);
+  --text: 16px/150% var(--font-family);
+  --text-mg: 14px/170% var(--font-family);
+  --text-sm: 12px/170% var(--font-family);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Style Global */
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover{
+  color: var(--brand-color);
+  text-decoration: underline;
+}
+
+.container{
+  padding-inline: 32px;
+  max-width: 1280;
+  margin-inline: auto;
+}
+
+.bg-surface-color{
+  background-color: var(--surface-color);
+}
+
+body{
+  font: var(--text);
+  color: var(--text-color-secondary);
+  background-color: var(--background-color);
+}
+
+div{
+  background-color: var(--shape-transparency);
+}
+
+div p{
+  background-color: #EF5F4C;
+}
+
+/* STYLE HEADER */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0;
+  padding-block: 20px;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-block: 8px;
+  gap: 24px;
+}
+
+nav ul li:last-child img {
+  width: 40px;
+  height: 40px;
+}
+
+nav ul li{
+  margin: 4px 0;
+}
+
+/* 
+.container{
+  height: 50vh;
+  display: flex;
+  border: dashed;
+  width: 400px;
+  margin: 20% auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-content: flex-end;
+  flex-flow: wrap column;
+  gap: 10px;
+}
+
+.item{
+  border: 2px solid red;
+  text-align: center;
+  --hue: 0;
+  flex-grow: 1;
+  background-color: hsl(var(--hue), 100%, 70%); 
+  width: 80px;
+  flex-basis: 100px;
+  flex-shrink: 2;
+  align-items: stretch;
+  flex: 1 0 20px;
+}
+
+div .item:nth-child(1){
+  --hue: 0;
+}
+
+div .item:nth-child(2){
+  --hue: 100;
+  order: 0;
+  flex-shrink: 1;
+  flex-grow: 2;
+  font-size: 50px;
+}
+
+div .item:nth-child(3){
+  --hue: 200;
+  align-self:self-end
+}
+
+div .item:nth-child(4){
+  --hue: 300;
+  flex-grow: 3;
+} */
