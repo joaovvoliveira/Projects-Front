@@ -50,14 +50,6 @@ body{
   background-color: var(--background-color);
 }
 
-div{
-  background-color: var(--shape-transparency);
-}
-
-div p{
-  background-color: #EF5F4C;
-}
-
 /* STYLE HEADER */
 
 nav {
@@ -85,7 +77,78 @@ nav ul li{
   margin: 4px 0;
 }
 
-/* 
+/* STYLE HEADER */
+
+header{
+  padding-block: 32px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+#profile{
+  display: flex;
+  height: 176;
+  gap: 32px;
+}
+
+#profile > div{
+  max-width: 592px;
+  margin-bottom: 8px;
+}
+
+#profile h1{
+  font: var(--text-lg);
+  color: var(--text-color-primary);
+  margin-bottom: 8px;
+}
+
+#profile p {
+  font: var(--text-mg);
+  
+}
+#info{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 16px;
+  width: 280px;
+  height: 104px;
+}
+#info li {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-content: center;
+}
+
+/* GALLERY STYLE */
+
+main {
+  margin-block: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+main img{
+  max-width: 286px;
+  max-height: 286px;
+  object-fit: cover;
+}
+
+footer{
+  display: flex;
+  padding-block: 24px;
+  gap: 24px;
+}
+
+footer span:nth-child(1){
+  margin-right: auto;
+}
+
+/*
 .container{
   height: 50vh;
   display: flex;
