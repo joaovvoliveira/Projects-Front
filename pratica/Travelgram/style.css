@@ -98,6 +98,14 @@ header{
   margin-bottom: 8px;
 }
 
+#profile img{
+  width: 176px;
+  height: 176px;
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+
 #profile h1{
   font: var(--text-lg);
   color: var(--text-color-primary);
@@ -142,6 +150,8 @@ footer{
   display: flex;
   padding-block: 24px;
   gap: 24px;
+
+  font: 14px/150% var(--font-family)
 }
 
 footer span:nth-child(1){
