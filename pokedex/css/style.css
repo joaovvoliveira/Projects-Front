@@ -14,21 +14,21 @@ body{
 }
 
 main{
-  background-color: red;
   display: inline-block;
   margin-top: 2%;
+  padding: 15px;
+  position: relative;
 }
 
 .pokedex{
   width: 100%;
   max-width: 425px;
-  border-radius: 50px;
 }
 
 .pokemon__image{
   position: absolute;
-  bottom: 55%;
   left: 50%;
+  bottom: 55%;
   transform: translate(-63%,20%);
   height: 18%;
 }
@@ -37,11 +37,23 @@ main{
   position: absolute;
   font-weight: 600;
   color: #aaa;
-  top: 54.5%;
+  top: 56%;
   right: 27%;
+  font-size: clamp(8px, 5vw, 25px);
 }
 
 .pokemon__name{
   color: #3a444d;
   text-transform: capitalize;
+}
+
+.pokemon_number{
+
+}
+
+.form{
+  position: absolute;
+  width: 65%;
+  top: 65%;
+  left: 13.5%;
 }
