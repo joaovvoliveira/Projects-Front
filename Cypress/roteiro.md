@@ -1,20 +1,17 @@
-Funcionalidade: Cadastro no site Adopet
 
-Cenário: Realizar um cadastro no site com sucesso
+Comando para executar o teste utilizando o mochawesome, que fornece relatorios sobre a execucao e com o --spec que permite executar apenas um teste, selecionando seu diretorio.
+npx cypress run --reporter mochawesome --spec ".\cypress\e2e\tentativa-invalida-login.cy.js"
 
-Passos:
+Linhas inseridas no cypress.config.js:
+  video: true,
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/results',
+    overwrite: false,
+    html: true,
+    json: false,
+    timestamp: "mmddyyyy_HHMMss"
+  },
 
-O usuário acessa a página de cadastro.
-O usuário preenche o campo "Nome".
-O usuário preenche o campo "E-mail" com um endereço de e-mail válido.
-O usuário preenche o campo "Senha" com uma senha válida.
-O usuário preenche o campo "Confirmação de Senha" com a mesma senha inserida no passo anterior.
-O usuário clica no botão "Cadastrar".
-
-Resultados Esperados:
-O sistema processa as informações fornecidas.
-
-Regra de Negócio:
-E-mail e senha são campos obrigatórios para o cadastro.
-
-<a class="initial_link" href="/cadastro" data-test="register-button">Cadastrar</a> == $0
+  npm install --save-dev mochawesome
+  

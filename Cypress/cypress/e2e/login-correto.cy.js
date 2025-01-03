@@ -5,10 +5,7 @@ describe('Pagina de Login', () => {
   })
 
   it('Deve preencher os campos de incorretamente para um novo usuario', () => {
-    cy.get('[data-test="input-loginEmail"]').type('Brunna81aahasdsa@gmail.com');
-    cy.get('[data-test="input-loginPassword"]').type('2580Bru');
-    cy.get('[data-test="submit-button"]').click();
-    
+    cy.login('Brunna81aahasdsa@gmail.com','2580Bru');
   })
 })
 

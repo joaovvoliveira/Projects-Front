@@ -1,0 +1,18 @@
+E2E -> Testes END-TO-END, testes feitos pelo usuario atraves de interacoes com o Sistema/interface.
+
+a Piramide tem o E2E no topo, integracao no meio e unidade embaixo.
+
+
+Passo 1 - Planejar os testes
+
+E2E gera mais custo
+
+Passo 2 - Criar o design dos testes
+
+Como serao escritos
+
+Passo 3 - Configurar o ambiente de testes
+
+Passo 4 - Executar os testes
+
+Passo 5 - Analisar os resultados

@@ -4,14 +4,8 @@ describe('Pagina de Cadastro', () => {
     
     cy.contains('a','Cadastrar').click();
 
-    cy.get('input[name="nome"]').type('Brunna Brunna');
-    cy.get('input[name="email"]').type('Brunnaaahasdsa@gmail.com');
-    cy.get('input[name="password"]').type('2580Bru');
-    cy.get('input[name="confirm_password"]').type('2580Bru');
-    
+    cy.cadastro('Brunna Brunna','Brunnaaahasdsa@gmail.com','2580Bru')
     cy.contains('button','Cadastrar').click();
-
-    cy.wait(4000);
 
   })
 })

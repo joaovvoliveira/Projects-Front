@@ -1,0 +1,108 @@
+E2E -> Testes END-TO-END, testes feitos pelo usuario atraves de interacoes com o Sistema/interface.
+
+a Piramide tem o E2E no topo, integracao no meio e unidade embaixo.
+Passo 1 - Planejar os testes
+
+1 -Plan the tests and map out which tests are truly necessary for our project. This is because end-to-end tests are more costly, as they take longer and are typically performed last.
+2 - Design the tests, meaning, based on the test scenarios, think about how these tests will be written.
+3 - Set up the testing environment.
+4 - Execute the tests.
+5 - Analyze the results obtained from the end-to-end tests and share the findings with the development team.
+
+[ How to install Cypress: ]
+npm install cypress --save-dev
+
+For version:{ npm install cypress@13.6.4 --save-dev }
+
+* It has to be done using the command NPM at the beginning.
+
+[Initialize NPM first ]
+npm init
+
+[Open Cypress web page:]
+npx cypress open
+
+[Runs the tests in the background without interface.]
+npx cypress run
+
+[Runs only one file]
+npx cypress run --spec .\cypress\e2e\login-correto.cy.js
+
+[Install Mochawesome - Automatically generates reports and presents information in an organized way.]
+npm install --save-dev mochawesome
+
+[Execute mochawesome]
+npx cypress run --reporter mochawesome
+
+{Commands}
+
+file: cypress.config.js - is for global settings
+*package.json*
+
+template cypress:
+
+describe('Describe here what is being done', () => {
+  it('what will be tested', () => {
+    cy.visit('https://example.cypress.io')
+  })
+})
+
+*cy.visit() - means that the cypress will try to acess that webpage
+
+*cy.contains('a', 'Cadastrar').click() - means "find element 'a' (in your HTML), where is written 'Cadastrar', them click" 
+[The contains command is used to locate an element based on its text content. Instead of specifying a CSS selector, you provide text that the element must contain. For example, cy.contains('button', 'Submit') will select a button that contains the text "Submit."]
+
+*cy.get('input[name="nome"]').type('Ana de Jesus') - means "find element input with attribute name="nome", them type 'Ana de Jesus'."
+[The get command is used to select elements based on their CSS selector. This means you specify a CSS selector to identify the desired element on the page. For example, if you have a button with a CSS class of .btn, you can select it with cy.get('.btn').]
+
+cy.get('[data-test="input-name"]')
+*The data-test attribute is specifically used for testing purposes, providing greater security and reliability for end-to-end tests.
+*cy.contains('Create a password').should('be.visible') - *be.visible means that the text in  "contains" has to be visible at this moment.
+
+describe('Página de login', () => {
+    beforeEach(() => {
+      cy.visit('https://adopet-frontend-cypress.vercel.app/');
+      cy.get('[data-test="login-button"]').click();
+    })
+
+*beforeEach - Literally, it means "before each test case, run the following commands.", Like, it will visit the website, and always click on login-button. 
+Frequently used to save lines of code.
+
+There is a file called *commands.js, where u can make your own function, to use later in other files, exemple:
+
+[commands.js]
+Cypress.Commands.add('login', (email, password) => {
+  cy.get('[data-test="input-loginEmail"]').type('ana@email.com');
+  cy.get('[data-test="input-loginPassword"]').type('Senha123');
+  cy.get('[data-test="submit-button"]').click();
+})
+
+[test.cy.js]
+describe('Página de login', () => {
+        it('Must fill up form with name/password correctly', () => {
+          cy.login('ana@email.com', 'Senha123')
+        })
+})
+
+[After making 'login' as a funcion, u just call it in your test, using your text as a parameter] 
+
+{Settings}
+
+IF u open file cypress.config.js, and insert *video: true, everytime that u run your files, it will be saved as a .mp4 file
+
+For [mochawesome] - insert lines below on file *cypress.config.js
+reporter: 'mochawesome',
+    reporterOptions: {
+      reportDir: 'cypress/results',
+      overwrite: false,
+      html: true,
+      json: false,
+      timestamp: "mmddyyyy_HHMMss" }
+
+
+{
+Exercícios
+Faça uma request para a API do AdoPet com um usuário autenticado e verifique se, ao acessar a página de /perfil, há o nome do usuário em sua resposta.
+Na página de exemplos do cypress, verifique se a funcionalidade de delete funciona.
+Na página de exemplos do cypress. verifique se a funcionalidade de filtrar tarefas funciona.
+}
