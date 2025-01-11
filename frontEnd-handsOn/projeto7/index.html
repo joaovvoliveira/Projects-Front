@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Alura Books</title>
@@ -32,7 +36,7 @@
             <a href="#" class="lista-menu__link">Design e UX</a>
           </li>
         </ul>
-        <img src="./img/Logo.svg" alt="" srcset=""  class="container__imagem" />
+        <img src="./img/Logo.svg" alt="" srcset="" class="container__imagem" />
       </div>
       <div class="container">
         <a href="#"
@@ -59,12 +63,54 @@
       </div>
     </header>
     <section class="banner">
-
       <h2 class="banner__titulo">Ja sabe por onde comecar ?</h2>
-      <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
-      <input type="search" class="banner__pesquisa" placeholder="Qual sera sua proxima leitura ?">
-
+      <p class="banner__texto">
+        Encontre em nossa estante o que precisa para seu desenvolvimento!
+      </p>
+      <input
+        type="search"
+        class="banner__pesquisa"
+        placeholder="Qual sera sua proxima leitura ?"
+      />
     </section>
-
+    <section class="carrossel">
+      <h2 class="carrossel__titulo">Novos Lancamentos</h2>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./img/Javascript.png" alt="" srcset="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/Arquitetura.png" alt="" srcset="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/Gestao.png" alt="" srcset="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/Tuning.png" alt="" srcset="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/MetricasAgeis.png" alt="" srcset="" />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        speed: 400,
+        spaceBetween: 10,
+        slidesPerView: 3,
+      });
+    </script>
   </body>
 </html>
