@@ -77,6 +77,9 @@
       <h2 class="carrossel__titulo">Novos Lancamentos</h2>
       <div class="swiper">
         <!-- Additional required wrapper -->
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
@@ -95,21 +98,89 @@
             <img src="./img/MetricasAgeis.png" alt="" srcset="" />
           </div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+
+        <div class="card">
+          <!-- Primeira Coluna -->
+          <div class="card__descricao">
+            <div class="descricao">
+              <h3 class="descricao__titulo">
+                Talvez voce tambem se interesse por:
+              </h3>
+              <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+              <p class="descrica__texto">
+                Construindo uma aplicacao integrada com a plataforma.
+              </p>
+              <!-- Segunda Coluna -->
+            </div>
+            <img src="./img/Angular.svg" alt="" srcset="" />
+          </div>
+          <div class="card__botoes">
+            <ul class="botoes">
+              <li class="botoes__itens">
+                <img src="./img/Favoritos.svg" alt="" srcset="" />
+              </li>
+              <li class="botoes__itens">
+                <img src="./img/Compras.svg" alt="" srcset="" />
+              </li>
+            </ul>
+            <a href="#" class="botoes__ancora">Saiba Mais</a>
+          </div>
+        </div>
       </div>
     </section>
+    <section class="topicos">
+      <h2 class="topicos__titulos">Topicos visitados recentemente</h2>
+      <ul class="topicos__lista">
+        <li class="topicos__item">
+          <a href="#" class="topicos__link">Android</a>
+        </li>
+        <li class="topicos__item">
+          <a href="#" class="topicos__link">Marketing Digital</a>
+        </li>
+        <li class="topicos__item">
+          <a href="#" class="topicos__link">Agile</a>
+        </li>
+        <li class="topicos__item">
+          <a href="#" class="topicos__link">Python</a>
+        </li>
+        <li class="topicos__item">
+          <a href="#" class="topicos__link">Typescript</a>
+        </li>
+        <li class="topicos__item">
+          <a href="#" class="topicos__link">HTML e CSS</a>
+        </li>
+        <li class="topicos__item">
+          <a href="#" class="topicos__link">Startups</a>
+        </li>
+        <li class="topicos__item">
+          <a href="#" class="topicos__link">Banco de Dados</a>
+        </li>
+      </ul>
+    </section>
+    <section class="contato">
+      <h2 class="contato__titulo">Fique por dentro das Novidades</h2>
+      <p class="contato__texto">Atualizacoes de e-books, novos livros, promocoes e outros.</p>
+      <input type="email" placeholder="Cadastre seu Email" id="contato__email">
+
+    </section>
+    <hr/>
+    <footer>
+      <h2>Grupo Alura</h2>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
         speed: 400,
         spaceBetween: 10,
         slidesPerView: 3,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+        },
       });
     </script>
   </body>
