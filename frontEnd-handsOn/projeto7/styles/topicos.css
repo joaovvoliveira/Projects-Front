@@ -1,41 +1,46 @@
-.topicos{
-  background: var(--azul-degrade);
-  padding: 1.5em;
-  text-align: center;
+.tópicos {
+    background: var(--azul-degrade);
+    text-align: center;
+    padding: 1em 0;
 }
 
-.topicos__titulos{
-  font-size: 16px;
-  font-weight: 300;
-  color: var(--branco);
-  padding: 1em 0em;
-  text-align: center;
-  text-transform: uppercase;
+.tópicos__titulo {
+    color: var(--branco);
+    font-weight: 300;
+    margin-bottom: 1em;
 }
 
-.topicos__lista{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.topicos__item{
-  margin: 1.5em 0.5em;
+.tópicos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.topicos__link{
-  color: var(--branco);
-  text-decoration: none;
-  background-color: var(--laranja);
-  padding: 0.5em;
-  font-size: 14px;
-  font-weight: 700;
+.tópicos__item {
+    margin: 2em 0.5em;
 }
 
-@media screen and(min-width:1024px) {
-  .topicos__titulos{
-    font-size: 24px;
-  }
-  .topicos__link{
-    font-size 18px;
-  }
+.tópicos__link {
+    color: var(--branco);
+    padding: 1em;
+    background-color: var(--laranja);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1024px) {
+    .tópicos__titulo {
+        font-size: 24px;
+    }
+
+    .tópicos__link {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .tópicos {
+        padding: 3em 30vw;
+    }
 }
