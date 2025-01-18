@@ -1,3 +1,0 @@
-Ubuntu
-
-myguest.virtualbox.org
