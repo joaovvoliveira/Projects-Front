@@ -1,0 +1,33 @@
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    align-items: center;
+}
+
+.cabecalho-logo-img{
+    height: 100px;
+    margin: 2em 0 2em 6em;
+}
+
+
+.lista-menu{
+    display: flex;
+    align-items: center;
+}
+
+.lista-menu-item{
+    font-size: 3em;
+    font-family: var(--font-primaria);
+    font-weight:200;
+    margin-right: 2em;
+}
+
+@media only screen and (max-width: 600px){
+    .lista-menu{
+        display: none;
+    }
+    .cabecalho-menu-img{
+        width: 50px;
+    }
+}

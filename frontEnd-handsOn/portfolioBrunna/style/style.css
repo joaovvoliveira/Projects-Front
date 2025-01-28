@@ -1,0 +1,14 @@
+@import url("./reset.css");
+@import url("./header.css");
+
+:root {
+    --font-primaria: "Poppins", serif;
+}
+
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
