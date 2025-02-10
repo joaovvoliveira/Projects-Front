@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.roboto-condensed{
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+:root{
+  font-size: 10px;
+  --main-color: #d3ad7f;
+  --black: #131313;
+  --bg: #000;
+  --border-bottom: 0.1rem solid rgba(255,255,255,0.3);
+  --primary-font: "Roboto Condensed", serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--primary-font);
+}
+
+.caixa-video{
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.caixa-video video{
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.mascara{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #000;
+  border-bottom: 0.1rem solid rgba(255, 255, 255,0.3);
+  width: 100vw;
+}
+
+section{
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header section{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+header section a img {
+  height: 6rem;
+}
+
+header section nav a{
+  margin: 0 1rem;
+  font-size: 1.8rem;
+  color: #fff;
+  transition: 0.3s linear;
+}
+
+header section nav a:hover{
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  padding-bottom: 0.5rem;
+}
+
+.caixa-principal{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.caixa-principal div{
+  max-width: 60rem;
+}
+
+.caixa-principal div h3{
+  color: #fff;
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+.caixa-principal div p{
+  font-size: 2rem;
+  color: #fff;
+  font-weight: lighter;
+  line-height: 1.8rem;
+  padding: 1rem 0;
+}
+.btn-link{
+  background-color: var(--main-color);
+  color: #fff;
+  display: inline-block;
+  margin-top: 3rem;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border: none;
+}
+.btn-link:hover{
+  transition: 0.3s linear;
+}
+
+.titulo{
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+
+.titulo span{
+  color: var(--main-color);
+}
+
+.sobre-container{
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+}
+.sobre-imagem{
+  flex: 1 1 45rem;
+}
+
+.sobre-texto {
+  flex: 1 1 45rem;
+  padding: 2rem;
+}
+
+.sobre-texto h3 {
+  font-size: 3rem;
+  color: #fff;
+}
+.sobre-texto p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: #fff;
+  line-height: 1.8rem;
+  margin: 3rem 0 2rem 0;
+}
+.modal{
+
+}
