@@ -43,6 +43,7 @@
   width: 100%;
   position: fixed;
   top: 0;
+  background: linear-gradient(109deg,rgba(10,12,16,0.99) 15%,rgba(10,12,16,0.7) 50%, rgba(10,12,16,0.99) 85%);
 }
 
 header{
@@ -162,5 +163,24 @@ header section nav a:hover{
   margin: 3rem 0 2rem 0;
 }
 .modal{
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 20px;
+  z-index: 4;
+  position: fixed;
+  top: 50%;
+  left:-30%;
+  transform: translate(-50%, -50%);
+  transition: left 1s linear;
+}
 
+.mascara-modal{
+  visibility: hidden;
+  z-index: 3;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(109deg,rgba(10,12,16,0.99) 15%,rgba(10,12,16,0.7) 50%, rgba(10,12,16,0.99) 85%);
 }
